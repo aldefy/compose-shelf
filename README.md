@@ -28,7 +28,7 @@ Google shipped `SideSheetBehavior` and `SideSheetDialog` for Views (Material 1.8
 ### Phone (Pixel 9 Pro Fold — Folded)
 
 <p align="center">
-  <img src="assets/demo-android.gif" alt="Android Phone Demo" width="260"/>
+  <img src="assets/demo-android.gif" alt="Android Phone Demo" width="360"/>
 </p>
 
 ## Installation
