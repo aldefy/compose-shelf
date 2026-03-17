@@ -14,7 +14,9 @@ Google shipped `SideSheetBehavior` and `SideSheetDialog` for Views (Material 1.8
 - **AdaptiveSheet** — side sheet on tablets, bottom sheet on phones
 
 <p align="center">
-  <img src="assets/demo.gif" alt="Compose Shelf Demo" width="600"/>
+  <img src="assets/demo.gif" alt="Desktop Demo" width="560"/>
+  &nbsp;&nbsp;
+  <img src="assets/demo-android.gif" alt="Android Demo" width="200"/>
 </p>
 
 ## Installation
