@@ -13,6 +13,10 @@ Google shipped `SideSheetBehavior` and `SideSheetDialog` for Views (Material 1.8
 - **StandardSideSheet** — inline panel without popup or scrim
 - **AdaptiveSheet** — side sheet on tablets, bottom sheet on phones
 
+<p align="center">
+  <img src="assets/demo.gif" alt="Compose Shelf Demo" width="600"/>
+</p>
+
 ## Installation
 
 ```kotlin

@@ -18,7 +18,6 @@ import androidx.compose.material.icons.filled.FilterList
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.StarBorder
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -134,14 +133,6 @@ fun SampleApp() {
                         }
                     },
                 )
-            },
-            floatingActionButton = {
-                FloatingActionButton(onClick = { showFilters = true }) {
-                    Icon(
-                        imageVector = Icons.Default.FilterList,
-                        contentDescription = "Open filters",
-                    )
-                }
             },
         ) { paddingValues ->
             LazyColumn(
