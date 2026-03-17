@@ -19,6 +19,12 @@ Google shipped `SideSheetBehavior` and `SideSheetDialog` for Views (Material 1.8
   <img src="assets/demo-android.gif" alt="Android Demo" width="200"/>
 </p>
 
+<p align="center">
+  <img src="assets/demo-foldable.png" alt="Pixel 9 Pro Fold — Unfolded" width="600"/>
+  <br/>
+  <em>Pixel 9 Pro Fold — unfolded inner display</em>
+</p>
+
 ## Installation
 
 ```kotlin
