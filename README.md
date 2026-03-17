@@ -13,16 +13,22 @@ Google shipped `SideSheetBehavior` and `SideSheetDialog` for Views (Material 1.8
 - **StandardSideSheet** — inline panel without popup or scrim
 - **AdaptiveSheet** — side sheet on tablets, bottom sheet on phones
 
-<p align="center">
-  <img src="assets/demo.gif" alt="Desktop Demo" width="560"/>
-  &nbsp;&nbsp;
-  <img src="assets/demo-android.gif" alt="Android Demo" width="200"/>
-</p>
+### Desktop
 
 <p align="center">
-  <img src="assets/demo-foldable.png" alt="Pixel 9 Pro Fold — Unfolded" width="600"/>
-  <br/>
-  <em>Pixel 9 Pro Fold — unfolded inner display</em>
+  <img src="assets/demo.gif" alt="Desktop Demo" width="600"/>
+</p>
+
+### Foldable (Pixel 9 Pro Fold — Unfolded)
+
+<p align="center">
+  <img src="assets/demo-foldable.png" alt="Foldable Demo" width="500"/>
+</p>
+
+### Phone (Pixel 9 Pro Fold — Folded)
+
+<p align="center">
+  <img src="assets/demo-android.gif" alt="Android Phone Demo" width="260"/>
 </p>
 
 ## Installation
