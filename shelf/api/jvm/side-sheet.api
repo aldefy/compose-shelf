@@ -1,0 +1,79 @@
+public final class io/github/aldefy/sidesheet/AdaptiveSheetKt {
+	public static final fun AdaptiveSheet-CYZQ01I (Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Lio/github/aldefy/sidesheet/SideSheetState;FLio/github/aldefy/sidesheet/SideSheetEdge;FFLio/github/aldefy/sidesheet/SideSheetColors;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class io/github/aldefy/sidesheet/ModalSideSheetKt {
+	public static final fun ModalSideSheet-7vwJh_E (Lkotlin/jvm/functions/Function0;Landroidx/compose/ui/Modifier;Lio/github/aldefy/sidesheet/SideSheetState;FLio/github/aldefy/sidesheet/SideSheetEdge;ZLandroidx/compose/ui/graphics/Shape;Lio/github/aldefy/sidesheet/SideSheetColors;Lkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class io/github/aldefy/sidesheet/SideSheetColors {
+	public static final field $stable I
+	public synthetic fun <init> (JJJJLkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-0d7_KjU ()J
+	public final fun component2-0d7_KjU ()J
+	public final fun component3-0d7_KjU ()J
+	public final fun component4-0d7_KjU ()J
+	public final fun copy-jRlVdoo (JJJJ)Lio/github/aldefy/sidesheet/SideSheetColors;
+	public static synthetic fun copy-jRlVdoo$default (Lio/github/aldefy/sidesheet/SideSheetColors;JJJJILjava/lang/Object;)Lio/github/aldefy/sidesheet/SideSheetColors;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getContainerColor-0d7_KjU ()J
+	public final fun getContentColor-0d7_KjU ()J
+	public final fun getHandleColor-0d7_KjU ()J
+	public final fun getScrimColor-0d7_KjU ()J
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/aldefy/sidesheet/SideSheetDefaults {
+	public static final field $stable I
+	public static final field INSTANCE Lio/github/aldefy/sidesheet/SideSheetDefaults;
+	public final fun bottomSheetShape ()Landroidx/compose/ui/graphics/Shape;
+	public final fun colors-ro_MJ88 (JJJJLandroidx/compose/runtime/Composer;II)Lio/github/aldefy/sidesheet/SideSheetColors;
+	public final fun expandedShape (Lio/github/aldefy/sidesheet/SideSheetEdge;)Landroidx/compose/ui/graphics/Shape;
+	public final fun getScrimColor-0d7_KjU ()J
+	public final fun getSheetMaxWidth-D9Ej5fM ()F
+	public final fun standardShape ()Landroidx/compose/ui/graphics/Shape;
+}
+
+public final class io/github/aldefy/sidesheet/SideSheetEdge : java/lang/Enum {
+	public static final field End Lio/github/aldefy/sidesheet/SideSheetEdge;
+	public static final field Start Lio/github/aldefy/sidesheet/SideSheetEdge;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/aldefy/sidesheet/SideSheetEdge;
+	public static fun values ()[Lio/github/aldefy/sidesheet/SideSheetEdge;
+}
+
+public final class io/github/aldefy/sidesheet/SideSheetState {
+	public static final field $stable I
+	public static final field Companion Lio/github/aldefy/sidesheet/SideSheetState$Companion;
+	public fun <init> (Lio/github/aldefy/sidesheet/SideSheetValue;Landroidx/compose/ui/unit/Density;Lkotlin/jvm/functions/Function1;Landroidx/compose/animation/core/AnimationSpec;)V
+	public synthetic fun <init> (Lio/github/aldefy/sidesheet/SideSheetValue;Landroidx/compose/ui/unit/Density;Lkotlin/jvm/functions/Function1;Landroidx/compose/animation/core/AnimationSpec;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun expand (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun getConfirmValueChange ()Lkotlin/jvm/functions/Function1;
+	public final fun getCurrentValue ()Lio/github/aldefy/sidesheet/SideSheetValue;
+	public final fun getOffset ()F
+	public final fun getTargetValue ()Lio/github/aldefy/sidesheet/SideSheetValue;
+	public final fun hide (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun isVisible ()Z
+}
+
+public final class io/github/aldefy/sidesheet/SideSheetState$Companion {
+	public final fun saver (Landroidx/compose/ui/unit/Density;Lkotlin/jvm/functions/Function1;Landroidx/compose/animation/core/AnimationSpec;)Landroidx/compose/runtime/saveable/Saver;
+}
+
+public final class io/github/aldefy/sidesheet/SideSheetStateKt {
+	public static final fun rememberSideSheetState (Lio/github/aldefy/sidesheet/SideSheetValue;Lkotlin/jvm/functions/Function1;Landroidx/compose/animation/core/AnimationSpec;Landroidx/compose/runtime/Composer;II)Lio/github/aldefy/sidesheet/SideSheetState;
+}
+
+public final class io/github/aldefy/sidesheet/SideSheetValue : java/lang/Enum {
+	public static final field Expanded Lio/github/aldefy/sidesheet/SideSheetValue;
+	public static final field Hidden Lio/github/aldefy/sidesheet/SideSheetValue;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lio/github/aldefy/sidesheet/SideSheetValue;
+	public static fun values ()[Lio/github/aldefy/sidesheet/SideSheetValue;
+}
+
+public final class io/github/aldefy/sidesheet/StandardSideSheetKt {
+	public static final fun StandardSideSheet-UR9CgXA (Landroidx/compose/ui/Modifier;Lio/github/aldefy/sidesheet/SideSheetState;FLio/github/aldefy/sidesheet/SideSheetEdge;ZLandroidx/compose/ui/graphics/Shape;Lio/github/aldefy/sidesheet/SideSheetColors;Lkotlin/jvm/functions/Function3;Landroidx/compose/runtime/Composer;II)V
+}
+
