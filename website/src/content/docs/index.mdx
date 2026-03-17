@@ -16,9 +16,33 @@ hero:
 
 import { Card, CardGrid, Tabs, TabItem } from '@astrojs/starlight/components';
 
-## Why Compose Shelf?
+## The Problem
 
-Google shipped `SideSheetBehavior` and `SideSheetDialog` for Views (Material 1.8.0), but **Compose has zero implementation**. No first-party, no third-party. Compose Shelf fills that gap.
+Google's Material 3 spec defines [Side Sheets](https://m3.material.io/components/side-sheets/overview) as a core component for displaying supplementary content alongside the main UI. They shipped View-based `SideSheetBehavior` and `SideSheetDialog` in Material 1.8.0, but **Compose has zero implementation** — no first-party, no third-party.
+
+If you're building a Compose Multiplatform app that needs a detail panel, filter sheet, or info overlay on tablets and foldables, you're on your own. Until now.
+
+## See It in Action
+
+### Desktop
+
+<p align="center">
+  <img src="/compose-shelf/demo/demo.gif" alt="Desktop Demo" width="600" />
+</p>
+
+### Foldable (Pixel 9 Pro Fold — Unfolded)
+
+<p align="center">
+  <img src="/compose-shelf/demo/demo-foldable.png" alt="Foldable Demo" width="500" />
+</p>
+
+### Phone (Pixel 9 Pro Fold — Folded)
+
+<p align="center">
+  <img src="/compose-shelf/demo/demo-android.gif" alt="Android Phone Demo" width="300" />
+</p>
+
+## Why Compose Shelf?
 
 <CardGrid>
   <Card title="M3 Spec Compliant" icon="approve-check">
@@ -34,6 +58,16 @@ Google shipped `SideSheetBehavior` and `SideSheetDialog` for Views (Material 1.8
     Every parameter has an M3-compliant default but is overridable — colors, shape, elevation, width, drag handle, edge, and gestures.
   </Card>
 </CardGrid>
+
+## How It Works
+
+Compose Shelf is built entirely on `compose.foundation` — no Material dependency required. The core uses `AnchoredDraggableState` for physics-based swipe-to-dismiss, `Popup` for modal overlay, and `BoxWithConstraints` for adaptive layout switching.
+
+| Component | What it does | When to use |
+|-----------|-------------|-------------|
+| `ModalSideSheet` | Popup overlay with scrim + swipe-to-dismiss | Temporary detail panels, filters, settings |
+| `StandardSideSheet` | Inline panel, no popup or scrim | Persistent side panels on wide screens |
+| `AdaptiveSheet` | Side sheet on ≥600dp, bottom sheet on phones | Apps targeting both phones and tablets |
 
 ## Quick Example
 
@@ -74,6 +108,19 @@ Google shipped `SideSheetBehavior` and `SideSheetDialog` for Views (Material 1.8
   </TabItem>
 </Tabs>
 
+## M3 Spec Compliance
+
+| Feature | Status |
+|---------|--------|
+| 28dp corner radius (cornerLarge) | Implemented |
+| Level 1 elevation shadow | Implemented |
+| Drag handle indicator | Implemented |
+| Scrim overlay (32% black) | Implemented |
+| Swipe-to-dismiss | Implemented |
+| Start/End edge with RTL | Implemented |
+| Accessibility (paneTitle, dismiss) | Implemented |
+| No swipe-to-open (per spec) | Correct |
+
 ## Platform Support
 
 | Platform | Artifact | Status |
@@ -84,3 +131,7 @@ Google shipped `SideSheetBehavior` and `SideSheetDialog` for Views (Material 1.8
 | iOS Simulator arm64 | `shelf-iossimulatorarm64` | Stable |
 | iOS x64 | `shelf-iosx64` | Stable |
 | WasmJs | `shelf-wasmjs` | Stable |
+
+## Zero Material Dependency
+
+Compose Shelf depends only on `compose.runtime`, `compose.foundation`, `compose.ui`, and `compose.animation`. It works with Material 3, Material 2, or your own custom design system.
