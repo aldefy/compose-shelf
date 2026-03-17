@@ -9,3 +9,5 @@
 .externalNativeBuild
 .cxx
 local.properties
+website/node_modules/
+website/dist/

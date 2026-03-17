@@ -1,0 +1,86 @@
+---
+title: Compose Shelf
+description: Material 3 Side Sheet for Compose Multiplatform
+template: splash
+hero:
+  tagline: The missing Material 3 Side Sheet that Google never shipped for Compose. Modal, Standard & Adaptive variants — works on Android, iOS, Desktop, and Web.
+  actions:
+    - text: Get Started
+      link: /compose-shelf/getting-started/installation/
+      icon: right-arrow
+    - text: View on GitHub
+      link: https://github.com/aldefy/compose-shelf
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid, Tabs, TabItem } from '@astrojs/starlight/components';
+
+## Why Compose Shelf?
+
+Google shipped `SideSheetBehavior` and `SideSheetDialog` for Views (Material 1.8.0), but **Compose has zero implementation**. No first-party, no third-party. Compose Shelf fills that gap.
+
+<CardGrid>
+  <Card title="M3 Spec Compliant" icon="approve-check">
+    28dp corner radius, Level 1 elevation, drag handle, scrim, accessibility semantics — all per the Material 3 specification.
+  </Card>
+  <Card title="Compose Multiplatform" icon="laptop">
+    Works on Android, iOS, JVM Desktop, and WasmJs. Single API across all platforms.
+  </Card>
+  <Card title="Three Variants" icon="list-format">
+    **Modal** (popup with scrim), **Standard** (inline, no scrim), and **Adaptive** (side sheet on tablets, bottom sheet on phones).
+  </Card>
+  <Card title="Fully Customizable" icon="setting">
+    Every parameter has an M3-compliant default but is overridable — colors, shape, elevation, width, drag handle, edge, and gestures.
+  </Card>
+</CardGrid>
+
+## Quick Example
+
+<Tabs>
+  <TabItem label="Modal Side Sheet">
+    ```kotlin
+    var showSheet by remember { mutableStateOf(false) }
+
+    if (showSheet) {
+        ModalSideSheet(
+            onDismissRequest = { showSheet = false },
+        ) {
+            Text("Sheet content", modifier = Modifier.padding(24.dp))
+        }
+    }
+    ```
+  </TabItem>
+  <TabItem label="Adaptive Sheet">
+    ```kotlin
+    // Side sheet on tablets (≥600dp), bottom sheet on phones
+    AdaptiveSheet(
+        onDismissRequest = { showSheet = false },
+    ) {
+        Text("Adapts to screen width", modifier = Modifier.padding(24.dp))
+    }
+    ```
+  </TabItem>
+  <TabItem label="Standard Side Sheet">
+    ```kotlin
+    Row {
+        MainContent(modifier = Modifier.weight(1f))
+
+        StandardSideSheet {
+            Text("Always visible panel", modifier = Modifier.padding(24.dp))
+        }
+    }
+    ```
+  </TabItem>
+</Tabs>
+
+## Platform Support
+
+| Platform | Artifact | Status |
+|----------|----------|--------|
+| Android | `shelf-android` | Stable |
+| JVM Desktop | `shelf-jvm` | Stable |
+| iOS arm64 | `shelf-iosarm64` | Stable |
+| iOS Simulator arm64 | `shelf-iossimulatorarm64` | Stable |
+| iOS x64 | `shelf-iosx64` | Stable |
+| WasmJs | `shelf-wasmjs` | Stable |
